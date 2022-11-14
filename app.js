@@ -42,15 +42,14 @@ function validatePhoneNumber() {
 function validateJobDescription() {
 	if (jobDescription.value.length < 50) {
         small.innerText = "max char must be 50";
-        small.classList.add("error");
-        jobDescription.classList.add("error-input");
+        jobDescription.classList.add("success-input");
         jobDescriptionIsValid = false;
 
 	} 
     else if(jobDescription.value.length == 50){
-        small.classList.remove("error");
-        jobDescription.classList.remove("error-input");
-        jobDescription.classList.add("success-input");
+        small.classList.add("error");
+        jobDescription.classList.add("error-input");
+        jobDescription.classList.remove("success-input");
         jobDescriptionIsValid = true;
     }
     return jobDescriptionIsValid;
